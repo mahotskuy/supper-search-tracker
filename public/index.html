@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>React App</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <div id="widget"></div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6252c65f5b007009"></script>
+  <script>
+    navigator.serviceWorker.register('./service-worker.js')
+      .then((reg) => {
+        console.log('Registration succeeded. Scope is ' + reg.scope);
+      }).catch((error) => {
+        console.log('Registration failed with ' + error);
+      })
+  </script>
+  <div class="super-navbar__actions ">
+    <div class="super-navbar__button super-navbar__search"><svg class="notion-icon notion-icon__search"
+        viewBox="0 0 24 24" style="width:20px;height:20px;fill:var(--color-text-default)">
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path fill="var(--color-text-default)"
+          d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z">
+        </path>
+      </svg></div>
+    <div class="super-navbar__button super-navbar__menu-open"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+        viewBox="0 0 24 24" width="24" height="24" stroke="var(--color-text-default)">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg></div>
+  </div>
+  <div class="notion-search open">
+    <div class="notion-search__wrapper">
+      <div class="notion-search__box">
+        <div class="notion-search__input">
+          <div class="notion-search__icon"><svg class="notion-icon notion-icon__search" viewBox="0 0 24 24"
+              style="width: 20px; height: 20px; fill: var(--color-text-default-light);">
+              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path
+                d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z">
+              </path>
+            </svg></div><input placeholder="Search" value="перемога ">
+          <div class="notion-search__clear"><svg class="notion-icon notion-icon__close" viewBox="0 0 24 24"
+              style="width: 20px; height: 20px; fill: var(--color-text-default-light);">
+              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path fill="var(--color-text-default-light)"
+                d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-11.414L9.172 7.757 7.757 9.172 10.586 12l-2.829 2.828 1.415 1.415L12 13.414l2.828 2.829 1.415-1.415L13.414 12l2.829-2.828-1.415-1.415L12 10.586z">
+              </path>
+            </svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+</html>
